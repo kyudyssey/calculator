@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background-color: #1e293b;
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 360px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.display-container {
+    background-color: #0f172a;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.previous-op {
+    color: #64748b;
+    font-size: 0.95rem;
+    min-height: 20px;
+    margin-bottom: 4px;
+}
+
+.display {
+    color: #f8fafc;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    background-color: #334155;
+    color: #f8fafc;
+    border: none;
+    border-radius: 14px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    padding: 18px 0;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn-operator {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+
+.btn-operator:hover {
+    background-color: #60a5fa;
+}
+
+.btn-clear {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-clear:hover {
+    background-color: #f87171;
+}
+
+.btn-equal {
+    background-color: #10b981;
+    color: #ffffff;
+    grid-row: span 2;
+    height: 100%;
+}
+
+.btn-equal:hover {
+    background-color: #34d399;
+}
+
+.btn-zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 18px;
+    }
+    .btn {
+        padding: 14px 0;
+        font-size: 1.1rem;
+    }
+    .display {
+        font-size: 1.8rem;
+    }
+}
